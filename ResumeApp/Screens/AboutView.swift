@@ -44,41 +44,45 @@ struct AboutView: View {
                                 }
                             }
                         }
-                        .padding(.horizontal, 13)
+                        .padding(.horizontal, 8)
                         
+                        // Abstract as component
                         VStack(alignment: .leading, spacing: 10) {
                             Text("Pictures")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
+                                .padding(.leading, 8)
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 
-                                HStack(spacing: 15) {
+                                HStack(spacing: 1) {
                                     ForEach(0..<5) { item in
                                         PictureItem()
+                                            .padding(.horizontal, 8)
                                     }
                                 }
                             }
                         }
-                        .padding(.leading, 13)
+                        
                         
                         VStack(alignment: .leading, spacing: 10) {
                             Text("My Music")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
+                                .padding(.leading, 8)
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 
-                                HStack(spacing: 15) {
+                                HStack(spacing: 1) {
                                     ForEach(0..<5) { item in
                                         PictureItem()
+                                            .padding(.horizontal, 8)
                                     }
                                 }
                             }
                         }
-                        .padding(.leading, 13)
                     }
                 }
             }
@@ -87,16 +91,16 @@ struct AboutView: View {
 }
 
 struct Hobby: Identifiable {
-    var id = UUID()
-    var name: String
-    var image: String
+    let id = UUID()
+    let name: String
+    let image: String
 }
 
 struct Picture: Identifiable {
-    var id = UUID()
-    var image: String
-    var title: String
-    var description: String
+    let id = UUID()
+    let image: String
+    let title: String
+    let description: String
 }
 
 let HobbyData = [

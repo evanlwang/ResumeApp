@@ -27,7 +27,7 @@ struct HobbieItem: View {
                     Spacer()
                 }
             }
-            .frame(width: 130, height: 55)
+            .frame(width: 130, height: 50)
         }
         .cornerRadius(5)
     }
@@ -36,6 +36,10 @@ struct HobbieItem: View {
 struct HobbieItem_Previews: PreviewProvider {
     static let HobbyData = [Hobby(name: "Guitar", image: "Yorushika")]
     static var previews: some View {
-        HobbieItem(hobby: HobbyData[0])
+        ZStack {
+            Color("ScreenGray")
+            HobbieItem(hobby: HobbyData[0])
+        }
+        .ignoresSafeArea()
     }
 }

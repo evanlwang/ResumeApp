@@ -11,11 +11,11 @@ struct PictureItem: View {
     var body: some View {
         return VStack(alignment: .leading) {
             Image("Yorushika")
-            .renderingMode(.original)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 160, height: 160)
-            .cornerRadius(10)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 160, height: 160)
+                .cornerRadius(10)
             Text("Place holder name")
                 .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                 .fontWeight(.bold)
